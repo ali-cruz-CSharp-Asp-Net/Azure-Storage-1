@@ -1,0 +1,15 @@
+﻿@model HttpPostedFileBase
+
+<h2>Carga de archivos al Blobs container</h2>
+
+@using (Html.BeginForm("Upload", "AzureUploads", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <input type="file" name="file" />
+                <input type="submit" value="Upload" />
+            </div>            
+        </div>
+    </div>
+}
